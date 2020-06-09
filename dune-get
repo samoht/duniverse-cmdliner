@@ -1,0 +1,13 @@
+((config
+  ((version 1) (root_packages (((name foo)))) (pull_mode Source)
+   (ocaml_compilers ())))
+ (deps
+  ((opamverse ())
+   (duniverse
+    (((dir cmdliner.1.0.4+dune)
+      (upstream git://github.com/dune-universe/cmdliner.git)
+      (ref
+       ((t duniverse-v1.0.4)
+        (commit d1bd753d88d297018c69a51070a399049dd1f966)))
+      (provided_packages (((name cmdliner) (version (1.0.4+dune))))))))))
+ (depexts ()))

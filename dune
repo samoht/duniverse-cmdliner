@@ -1,0 +1,7 @@
+(executable (name foo) (libraries cmdliner))
+
+(rule
+ (alias runtest)
+ (action (progn
+   (with-stdout-to foo.diff (run ./foo.exe --help=plain))
+   (diff foo.expected foo.diff))))
